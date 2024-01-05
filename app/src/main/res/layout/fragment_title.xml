@@ -3,33 +3,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1D81D1"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.favourite.FavouriteFragment">
+    tools:context=".TitleFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:layout_margin="10dp"
+            />
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/text_favourite"
+        android:id="@+id/text_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
+        android:textColor="@android:color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        tools:text="Title" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/navigate_first_screen"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_favourite" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

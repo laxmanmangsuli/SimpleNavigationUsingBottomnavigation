@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_places"
+    app:startDestination="@id/placesFragment2">
+
+    <fragment
+        android:id="@+id/placesFragment2"
+        android:name="com.example.navigation.ui.places.PlacesFragment"
+        android:label="fragment_places"
+        tools:layout="@layout/fragment_places" >
+        <action
+            android:id="@+id/action_placesFragment2_to_titleFragment3"
+            app:destination="@id/titleFragment3" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/titleFragment3"
+        android:name="com.example.navigation.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="Places screen" />
+    </fragment>
+</navigation>

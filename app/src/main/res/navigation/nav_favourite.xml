@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_favourite"
+    app:startDestination="@id/favouriteFragment2">
+
+    <fragment
+        android:id="@+id/favouriteFragment2"
+        android:name="com.example.navigation.ui.favourite.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" >
+        <action
+            android:id="@+id/action_favouriteFragment2_to_titleFragment"
+            app:destination="@id/titleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.navigation.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <argument
+            android:name="title"
+            android:defaultValue="Favourite Screen "
+            app:argType="string" />
+    </fragment>
+</navigation>

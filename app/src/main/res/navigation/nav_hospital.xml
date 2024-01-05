@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_hospital"
+    app:startDestination="@id/hospitalFragment2">
+
+    <fragment
+        android:id="@+id/hospitalFragment2"
+        android:name="com.example.navigation.ui.hospital.HospitalFragment"
+        android:label="fragment_hospital"
+        tools:layout="@layout/fragment_hospital" >
+        <action
+            android:id="@+id/action_hospitalFragment2_to_titleFragment2"
+            app:destination="@id/titleFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/titleFragment2"
+        android:name="com.example.navigation.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="Hospital screen" />
+    </fragment>
+</navigation>
